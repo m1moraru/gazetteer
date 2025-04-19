@@ -1,0 +1,161 @@
+/* Reset & Map Base */
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+html, body, #map {
+    width: 100%;
+    height: 100vh;
+}
+  
+#selectContainer {
+   position: fixed;
+   top: 0;
+   z-index: 1000;
+   width: 100%;
+   padding: 11px 0;
+}
+  
+#countrySelect {
+    width: 200px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-top.leaflet-left .easy-button-container,
+.leaflet-control {
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+} 
+
+.easy-button-button.active-button {
+    background-color: black !important;
+    color: white !important;
+}
+
+#infoTable i,
+#infoTable svg,
+#infoTable .fa,
+#infoTable .fas,
+#infoTable .bi {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+
+.custom-cluster {
+    background-color: transparent;
+    border: none;
+  }
+  
+  .cluster-icon {
+    background-color: rgba(0, 123, 255, 0.9);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .cluster-icon.medium {
+    width: 50px;
+    height: 50px;
+    font-size: 16px;
+  }
+  
+.cluster-icon.large {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+}
+
+#poiModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 1.5rem;
+}
+
+@media (min-width: 769px) {
+
+    #btn-toggle-basemap {
+        margin-right: 26px !important;
+        margin-bottom: 50px !important;
+        width: 40px !important;
+        height: 40px !important;
+        padding: 5px;
+        font-size: 1.6rem !important;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.85) !important;
+        z-index: 1001;
+    }
+
+    .leaflet-top.leaflet-right .leaflet-control-zoom {
+        margin-top: 80px;
+        margin-right: 38px;
+        border-radius: 8px;
+        width: 34px;
+        z-index: 1001;
+    }
+    
+    .leaflet-control-zoom a {
+        width: 32px;
+        height: 38px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.85);
+    }
+}
+  
+
+@media (max-width: 768px) {
+
+    .leaflet-bottom.leaflet-right .leaflet-control-zoom {
+      margin-bottom: 30px !important;
+      margin-right: 20px !important;
+      margin-top: -15px !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.85);
+      border-radius: 8px;
+      z-index: 1001;
+      width: 34px;
+    }
+
+    .leaflet-control-zoom a {
+        width: 32px !important;
+        height: 35px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.85);
+    }
+
+    .leaflet-left .easy-button-button {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8) !important;
+    }
+
+    #btn-toggle-basemap {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
+    }
+      
+    #btn-toggle-basemap:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6) !important;
+    }
+
+    #poiModal .modal-dialog {
+        max-width: 85% !important;
+        max-height: 850% !important;
+        margin: 1rem auto !important;
+    }
+    #poiModal .modal-body {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+}
+  
+  
+  
+  
+  

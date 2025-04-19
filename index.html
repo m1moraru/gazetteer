@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Gazetteer</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/leaflet.css" />
+  <link rel="stylesheet" href="./css/leaflet.extra-markers.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <style>
+    #map { height: 100vh; }
+    #countrySelect { width: 200px; }
+  </style>
+</head>
+<body>
+
+  <div id="selectContainer">
+    <select id="countrySelect" class="form-select shadow-sm">
+      <option selected disabled>Choose a country</option>
+    </select>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Info Modal -->
+  <div id="exampleModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content shadow">
+        <div class="modal-header bg-success bg-gradient text-white">
+          <h5 class="modal-title d-flex align-items-center gap-2">
+            <span>Overview</span>
+            <img id="countryFlag" src="" alt="Flag" style="height: 24px; border-radius: 2px;" />
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped" id="infoTable" style="line-height: 1.8;"></table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Weather Modal -->
+  <div id="weatherModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Weather Forecast</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="weatherBody"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Currency Modal -->
+  <div id="currencyModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title">Currency Converter</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label for="amountInput" class="form-label">Amount in local currency:</label>
+            <input type="number" id="amountInput" class="form-control" />
+          </div>
+          <div>
+            <strong>Converted to USD:</strong> <span id="converted">0</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- News Modal -->
+  <div id="newsModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title">Today's Headlines</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body" id="newsBody" style="max-height: 60vh; overflow-y: auto;"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POI Modal -->
+  <div id="poiModal" class="modal fade" tabindex="-1">
+     <div class="modal-dialog modal-dialog-centered modal-lg">
+       <div class="modal-content shadow">
+         <div class="modal-header bg-info text-white">
+           <h5 class="modal-title" id="poiModalTitle"></h5>
+           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+         </div>
+         <div class="modal-body" id="poiModalBody"></div>
+         <div class="modal-footer">
+           <button type="button" class="btn btn-outline-info btn-sm" data-bs-dismiss="modal">Close</button>
+         </div>
+       </div>
+     </div>
+   </div>
+  
+
+  <script src="./js/leaflet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <script src="./js/leaflet.extra-markers.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>

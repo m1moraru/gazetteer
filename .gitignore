@@ -1,0 +1,19 @@
+# Ignore PHP config with API keys
+config.php
+
+# Node modules (if using Node somewhere)
+node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor settings
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Environment files
+.env
