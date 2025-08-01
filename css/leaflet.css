@@ -132,7 +132,7 @@
 .leaflet-control {
 	position: relative;
 	z-index: 800;
-	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: visiblePainted; 
 	pointer-events: auto;
 	}
 .leaflet-top,
@@ -251,7 +251,7 @@ svg.leaflet-zoom-animated {
 .leaflet-image-layer.leaflet-interactive,
 .leaflet-pane > svg path.leaflet-interactive,
 svg.leaflet-image-layer.leaflet-interactive path {
-	pointer-events: visiblePainted; /* IE 9-10 doesn't have auto */
+	pointer-events: visiblePainted;
 	pointer-events: auto;
 	}
 
@@ -403,9 +403,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	}
 
 /* Default icon URLs */
-.leaflet-default-icon-path { /* used only in path-guessing heuristic, see L.Icon.Default */
+.leaflet-default-icon-path { 
 	background-image: url(images/marker-icon.png);
-	}
+}
 
 
 /* attribution and scale controls */
@@ -469,7 +469,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-touch .leaflet-bar {
 	border: 2px solid rgba(0,0,0,0.2);
 	background-clip: padding-box;
-	}
+}
 
 
 /* popup */
@@ -569,10 +569,9 @@ svg.leaflet-image-layer.leaflet-interactive path {
 .leaflet-div-icon {
 	background: #fff;
 	border: 1px solid #666;
-	}
+}
 
 
-/* Tooltip */
 /* Base styles for the element that has a tooltip */
 .leaflet-tooltip {
 	position: absolute;
